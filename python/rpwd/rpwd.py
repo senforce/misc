@@ -26,7 +26,12 @@ def gen_random_str(length, ratio=[1,1,1]):
 
 
 def main():
-    rand_str = gen_random_str(16, [3, 4, 4])
+    argc = len(sys.argv)
+    if argc < 2:
+        print('[CMD] length')
+        exit(-1)
+    length = int(sys.argv[1])
+    rand_str = gen_random_str(length, [3, 4, 4])
     print(rand_str)
 
 
